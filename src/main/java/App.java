@@ -25,7 +25,6 @@ public class App {
             try {
                 return Files.lines(file, StandardCharsets.UTF_8);
             } catch (Exception e) {
-                System.out.println("File " + file + " not presented there");
                 return Stream.empty();
             }
         }).collect(Collectors.groupingBy(it -> {
