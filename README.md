@@ -5,14 +5,13 @@
 - Gradle
             
 ## Установка
-```sh
+```
 git clone https://github.com/makniker/FileUtilTest.git
 cd FileUtilTest
 ```
 ## Сборка и запуск
-```sh
-./gradlew build
-java -jar build/libs/<your_project>.jar  
-# Запуск тестов
-./gradlew test
+```
+gradlew build #Сборка и тесты
+java -jar build/libs/ShiftFileFilter-1.0-SNAPSHOT.jar  
+gradlew test # Запуск тестов
 ```
