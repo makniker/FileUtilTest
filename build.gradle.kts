@@ -21,5 +21,5 @@ tasks.test {
 }
 
 application {
-    mainClass.set("mak.niker.App")
+    mainClass.set("App")
 }
