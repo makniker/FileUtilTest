@@ -59,7 +59,8 @@ public class App {
         try {
             out.passIntoFile(files);
         } catch (IOException e) {
-
+            System.out.println(e.getMessage());
+            return;
         }
         logger.printStatistic();
     }

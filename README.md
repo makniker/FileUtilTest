@@ -2,15 +2,17 @@
  
 ## Требования
 - Java 17+
-- Gradle/Maven (если используется)
+- Gradle
             
 ## Установка
 ```sh
-git clone <repo_url>
+git clone https://github.com/makniker/FileUtilTest.git
 cd <project_name>
 ```
 ## Сборка и запуск
 ```sh
 ./gradlew build
-java -jar build/libs/<your_project>.jar  # Запуск JAR-файла
+java -jar build/libs/<your_project>.jar  
+# Запуск тестов
+./gradlew test
 ```
