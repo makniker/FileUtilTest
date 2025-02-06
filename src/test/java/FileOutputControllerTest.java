@@ -83,7 +83,7 @@ class FileOutputControllerTest {
             for (var entry : testMap.entrySet()) {
                 Path filePath = tempDir.resolve(entry.getKey() + ".txt");
                 assertTrue(Files.exists(filePath));
-                assertEquals(Files.readAllLines(filePath), entry.getValue());
+                assertEquals(entry.getValue(), Files.readAllLines(filePath));
             }
         });
     }

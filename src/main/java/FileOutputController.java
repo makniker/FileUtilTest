@@ -42,8 +42,6 @@ public class FileOutputController {
                 boolean fileExists = Files.exists(filePath);
                 boolean append = !isOverride && fileExists;
                 StandardOpenOption[] options = append ? new StandardOpenOption[]{StandardOpenOption.APPEND} : new StandardOpenOption[]{StandardOpenOption.CREATE, StandardOpenOption.TRUNCATE_EXISTING};
-                Files.write(filePath, lines, options);
-                lines.forEach(line -> logger.logString(name, line));
                 try (BufferedWriter writer = Files.newBufferedWriter(filePath, options)) {
                     for (String line : lines) {
                         writer.write(line);

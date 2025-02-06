@@ -7,7 +7,7 @@
 ## Установка
 ```sh
 git clone https://github.com/makniker/FileUtilTest.git
-cd <project_name>
+cd FileUtilTest
 ```
 ## Сборка и запуск
 ```sh
