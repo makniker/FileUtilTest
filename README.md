@@ -11,7 +11,9 @@ cd FileUtilTest
 ```
 ## Сборка и запуск
 ```
-gradlew build #Сборка и тесты
-java -jar build/libs/ShiftFileFilter-1.0-SNAPSHOT.jar  
-gradlew test # Запуск тестов
+#Сборка и тесты
+gradlew build
+gradlew run --args="-s file1.txt"
+#тесты
+gradlew test
 ```
