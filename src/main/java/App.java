@@ -3,6 +3,7 @@ import com.beust.jcommander.ParameterException;
 import logger.Logger;
 import parser.Args;
 
+import java.io.IOException;
 import java.nio.charset.StandardCharsets;
 import java.nio.file.Files;
 import java.nio.file.Path;
@@ -12,7 +13,7 @@ import java.util.Map;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
-public class Main {
+public class App {
 
     private static void provideArgs(String[] args, Args cliArgs) throws ParameterException {
         JCommander parser = JCommander.newBuilder().addObject(cliArgs).build();
@@ -55,7 +56,11 @@ public class Main {
         Logger logger = cliArgs.provideLogger();
         FileOutputController out = new FileOutputController(logger, cliArgs);
         var files = provideFilteredData(filePaths);
-        out.passIntoFile(files);
+        try {
+            out.passIntoFile(files);
+        } catch (IOException e) {
+
+        }
         logger.printStatistic();
     }
 }
